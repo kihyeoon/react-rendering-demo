@@ -1,12 +1,12 @@
 import Cells from "./Cells";
 import COLORS from "./colors";
-import { SetStateAction, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function Blocking() {
   const [text, setText] = useState("");
   const [colors, setColors] = useState<string[]>([]);
 
-  const onChangeText = (e: { target: { value: SetStateAction<string> } }) => {
+  const onChangeText = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
     const pendingColors: string[] = [];
     const textArr = [...text];
@@ -21,7 +21,7 @@ export default function Blocking() {
 
   return (
     <div id="app">
-      <div>텍스트를 입력하세요</div>
+      <div>텍스트를 입력하세요({text.length})</div>
       <input type="text" value={text} onChange={onChangeText} />
       <p id="text">{text}</p>
       <Cells colors={colors} />
