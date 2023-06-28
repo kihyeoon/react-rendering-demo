@@ -1,15 +1,6 @@
+import Cells from "./Cells";
 import COLORS from "./colors";
 import { SetStateAction, useState, useTransition } from "react";
-
-function Cells({ colors }: { colors: string[] }) {
-  return (
-    <div id="cells">
-      {colors.map((color, index) => (
-        <span key={index} id="cell" style={{ backgroundColor: color }} />
-      ))}
-    </div>
-  );
-}
 
 export default function Transition() {
   const [text, setText] = useState("");
