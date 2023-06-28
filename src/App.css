@@ -1,0 +1,31 @@
+span {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  margin: 1px;
+}
+
+.cells {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 10px;
+  max-width: 1280px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  margin: 10px 0;
+  width: 50%;
+}
